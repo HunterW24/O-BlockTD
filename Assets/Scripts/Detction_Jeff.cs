@@ -10,7 +10,7 @@ public class Detction_Jeff : MonoBehaviour
     public GameObject projectilePrefab; // Reference to the projectile prefab
     public float projectileSpeed = 10f; // Speed of the projectile
     public GameObject fireposition;
-    public float Delay = 1.5f;
+    
     private void Update()
     {
         // Detect objects within the detection sphere

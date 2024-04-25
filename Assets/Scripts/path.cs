@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class path : MonoBehaviour
 {
-
-   [SerializeField] Transform[] Points;
+    [SerializeField]
+    GameObject parentPoint;
+   [SerializeField] GameObject[] Points = new GameObject[37];
 
     [SerializeField]  private float movespeed;
     [SerializeField]
@@ -13,6 +14,22 @@ public class path : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        parentPoint = GameObject.FindWithTag("Points");
+
+        if (parentPoint != null)
+        {
+            // Loop through each child in the hierarchy and access them in order
+            for (int i = 0; i < parentPoint.transform.childCount; i++)
+            {
+                // Get the child game object at index 'i'
+                GameObject childObject = parentPoint.transform.GetChild(i).gameObject;
+                Points[i] = childObject;
+
+                // Do something with the child object, for example, print its name
+                //Debug.Log("Child object name: " + childObject.name);
+            }
+        }
         transform.position = Points[pointsIndex].transform.position;
     }
 

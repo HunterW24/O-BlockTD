@@ -10,21 +10,33 @@ public class Detction_Jeff : MonoBehaviour
     public GameObject projectilePrefab; // Reference to the projectile prefab
     public float projectileSpeed = 10f; // Speed of the projectile
     public GameObject fireposition;
-    
+    public float shootingDelay = 1f; // Delay between shots
+
+    private bool canShoot = true; // Flag to control shooting delay
+
     private void Update()
     {
         // Detect objects within the detection sphere
         Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius, layerToDetect);
 
-        
-
         foreach (Collider collider in colliders)
         {
             // Perform actions on detected objects
             // For example, shoot a projectile at the detected target
-            ShootProjectileAtTarget(collider.gameObject.transform);
+            if (canShoot)
+            {
+                ShootProjectileAtTarget(collider.gameObject.transform);
+                StartCoroutine(ShootDelay());
+            }
             transform.LookAt(collider.gameObject.transform);
         }
+    }
+
+    private IEnumerator ShootDelay()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(shootingDelay);
+        canShoot = true;
     }
 
     private void ShootProjectileAtTarget(Transform target)
@@ -42,7 +54,7 @@ public class Detction_Jeff : MonoBehaviour
         if (projectileRigidbody != null)
         {
             // Shoot the projectile towards the target
-            projectileRigidbody.AddForce (direction * projectileSpeed, ForceMode.Impulse);
+            projectileRigidbody.AddForce(direction * projectileSpeed, ForceMode.Impulse);
         }
     }
 
@@ -53,5 +65,3 @@ public class Detction_Jeff : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 }
-
-

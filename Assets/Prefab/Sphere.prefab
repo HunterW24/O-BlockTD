@@ -157,5 +157,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  movespeed: 2
+  - {fileID: 0}
+  - {fileID: 0}
+  movespeed: 5
   pointsIndex: 0

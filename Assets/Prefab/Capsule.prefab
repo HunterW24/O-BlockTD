@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 7645244062612271837}
   - component: {fileID: 4521061718297175507}
   - component: {fileID: 3897907472215120292}
-  - component: {fileID: 1845671947362817795}
+  - component: {fileID: 7622871206808235759}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1845671947362817795
+--- !u!114 &7622871206808235759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4510501205814161563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ddbc058dd60074db2cd9ce1d8cda49, type: 3}
+  m_Script: {fileID: 11500000, guid: 02153977604ca114a8beb80ed52bf838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToDestroy: Ball
+  score: 1

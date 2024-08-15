@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2892133647153940306}
   - component: {fileID: 4095869306421313161}
   - component: {fileID: 5825015219329661797}
+  - component: {fileID: 4227289152725969968}
   m_Layer: 3
   m_Name: Sphere
   m_TagString: Ball
@@ -119,45 +120,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentPoint: {fileID: 0}
-  Points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Points: []
   movespeed: 1
   pointsIndex: 0
+--- !u!114 &4227289152725969968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6668870305973739727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccae8c7fa0486546af46d32093af3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

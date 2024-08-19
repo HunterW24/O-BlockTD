@@ -6,7 +6,7 @@ public class path : MonoBehaviour
 {
     [SerializeField]
     GameObject parentPoint;
-   [SerializeField] GameObject[] Points = new GameObject[37];
+   [SerializeField] GameObject[] Points;
 
     [SerializeField]  private float movespeed;
     [SerializeField]
@@ -17,7 +17,7 @@ public class path : MonoBehaviour
 
         parentPoint = GameObject.FindWithTag("Points");
 
-        if (parentPoint != null)
+        /*if (parentPoint != null)
         {
             // Loop through each child in the hierarchy and access them in order
             for (int i = 0; i < parentPoint.transform.childCount; i++)
@@ -29,7 +29,9 @@ public class path : MonoBehaviour
                 // Do something with the child object, for example, print its name
                 //Debug.Log("Child object name: " + childObject.name);
             }
-        }
+        }*/
+        Points = parentPoint.GetComponentsInChildren<GameObject>();
+
         transform.position = Points[pointsIndex].transform.position;
     }
 

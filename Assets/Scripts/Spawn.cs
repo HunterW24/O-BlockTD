@@ -10,6 +10,8 @@ public class Spawn : MonoBehaviour
 
     public float spawnInterval = 0.5f; // Interval between spawns
     private float timer = 0f;
+    
+   
 
     void Update()
     {
@@ -31,18 +33,15 @@ public class Spawn : MonoBehaviour
 
     Vector3 GetRandomSpawnPosition()
     {
-        // Generate a random position within the spawn area
-        float randomX = Random.Range(spawnAreaMin.x, spawnAreaMax.x);
-        float randomY = Random.Range(spawnAreaMin.y, spawnAreaMax.y);
-        float randomZ = Random.Range(spawnAreaMin.z, spawnAreaMax.z);
-        return new Vector3(randomX, randomY, randomZ);
+        return transform.position;
     }
-
     void OnDrawGizmosSelected()
     {
         // Draw the spawn area gizmo in the Unity Editor
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube((spawnAreaMin + spawnAreaMax) / 2f, spawnAreaMax - spawnAreaMin);
+        Gizmos.DrawWireCube(transform.position, spawnAreaMax - spawnAreaMin);
     }
+
+
 
 }

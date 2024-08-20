@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class path : MonoBehaviour
 {
     [SerializeField]
     GameObject parentPoint;
-   [SerializeField] GameObject[] Points;
+   [SerializeField] Transform[] Points;
 
     [SerializeField]  private float movespeed;
     [SerializeField]
@@ -30,9 +31,9 @@ public class path : MonoBehaviour
                 //Debug.Log("Child object name: " + childObject.name);
             }
         }*/
-        Points = parentPoint.GetComponentsInChildren<GameObject>();
+        Points = parentPoint.GetComponentsInChildren<Transform>();
 
-        transform.position = Points[pointsIndex].transform.position;
+        transform.position = Points[pointsIndex].position;
     }
 
     // Update is called once per frame
@@ -40,9 +41,9 @@ public class path : MonoBehaviour
     {
         if(pointsIndex <= Points.Length -1)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Points[pointsIndex].transform.position, movespeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Points[pointsIndex].position, movespeed * Time.deltaTime);
             
-            if(Vector3.Distance (transform.position, Points[pointsIndex].transform.position) < 0.1f )
+            if(Vector3.Distance (transform.position, Points[pointsIndex].position) < 0.1f )
             {
                 pointsIndex += 1;
             }

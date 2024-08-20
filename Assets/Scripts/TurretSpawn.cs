@@ -1,15 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SpawnPrefab : MonoBehaviour
+public class ObjectSpawner : MonoBehaviour
 {
-    public GameObject prefabToSpawn; // Reference to the prefab
-    public Transform spawnPoint; // Optional: Specify a spawn position
+    public GameObject objectToSpawn; // The object to spawn
+    public Transform spawnLocation;  // The location where the object will be spawned
+    public Button spawnButton;       // The UI Button that triggers the spawn
 
-    public void Spawn()
+     
+
+    void Start()
     {
-        Instantiate(prefabToSpawn, spawnPoint.position, spawnPoint.rotation);
+        // Make sure the button is linked in the inspector
+        if (spawnButton != null)
+        {
+            spawnButton.onClick.AddListener(SpawnObject);
+        }
     }
+
+  
+
+    void SpawnObject()
+    {
+        if (objectToSpawn != null && spawnLocation != null)
+        {
+            // Instantiate the object at the spawn location with the same rotation
+            Instantiate(objectToSpawn, spawnLocation.position, spawnLocation.rotation);
+        }
+    }
+      //Debug.Log("Spawn");
 }

@@ -13496,6 +13496,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   projectilePrefab: {fileID: 4510501205814161563, guid: 3b856997a0eb9134ea6e89af7f93d1d2, type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 35
   fireposition: {fileID: 3872226510157870010}
   shootingDelay: 0.5

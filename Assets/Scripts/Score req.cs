@@ -14,7 +14,7 @@ public class Scorereq : MonoBehaviour
     {
         // Update score as needed
 
-        isButtonEnabled = score >= 10;
+        isButtonEnabled = score >= 0;
         button.interactable = isButtonEnabled;
     }
 }

@@ -12,7 +12,7 @@ public class Detction_Jeff : MonoBehaviour
     public GameObject fireposition;
     public float shootingDelay = 1f; // Delay between shots
 
-    private bool canShoot = true; // Flag to control shooting delay
+    protected bool canShoot = true; // Flag to control shooting delay
 
     private void Update()
     {
@@ -32,7 +32,7 @@ public class Detction_Jeff : MonoBehaviour
         }
     }
 
-    private IEnumerator ShootDelay()
+    protected IEnumerator ShootDelay()
     {
         canShoot = false;
         yield return new WaitForSeconds(shootingDelay);

@@ -32,8 +32,8 @@ public class path : MonoBehaviour
             }
         }*/
         Points = parentPoint.GetComponentsInChildren<Transform>();
-
-        transform.position = Points[pointsIndex].position;
+        pointsIndex = 1;
+        //transform.position = Points[pointsIndex].position;
     }
 
     // Update is called once per frame

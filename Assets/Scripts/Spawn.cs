@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
     public GameObject[] itemsToSpawn; // Array of items to spawn
     public Vector3 spawnAreaMin; // Minimum position of the spawn area
     public Vector3 spawnAreaMax; // Maximum position of the spawn area
-
+    public Transform spawnPoint;
     public float spawnInterval = 0.5f; // Interval between spawns
     private float timer = 0f;
     
@@ -25,15 +25,14 @@ public class Spawn : MonoBehaviour
             timer = 0f;
 
             // Spawn a random item within the spawn area
-            Vector3 spawnPosition = GetRandomSpawnPosition();
             int randomItemIndex = Random.Range(0, itemsToSpawn.Length);
-            GameObject newItem = Instantiate(itemsToSpawn[randomItemIndex], spawnPosition, itemsToSpawn[randomItemIndex].transform.rotation);
+            GameObject newItem = Instantiate(itemsToSpawn[randomItemIndex], spawnPoint.position, itemsToSpawn[randomItemIndex].transform.rotation);
         }
     }
 
     Vector3 GetRandomSpawnPosition()
     {
-        return transform.position;
+        return spawnPoint.position;
     }
     void OnDrawGizmosSelected()
     {

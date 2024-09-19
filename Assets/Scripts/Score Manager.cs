@@ -10,10 +10,12 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highscoreText;
     public TextMeshProUGUI pointsText;
+    
 
     public static int score = 0;
     int highscore = 0;
-    int points = 0;
+    public static int points = 0;
+    
     // Start is called before the first frame update
     void Start()
     {

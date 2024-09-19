@@ -12,6 +12,7 @@ public class DestroyBall : MonoBehaviour
             Destroy(gameObject);
 
             ScoreManager.score++;
+            ScoreManager.points++;
             
         }
     }

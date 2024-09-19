@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Scorereq : MonoBehaviour
 {
+    public int points;
     public Button button;
     public bool isButtonEnabled = false;
 
@@ -13,7 +14,12 @@ public class Scorereq : MonoBehaviour
     {
         // Update score as needed
 
-        isButtonEnabled = ScoreManager.score > 0;
+        isButtonEnabled = ScoreManager.points > points;
         button.interactable = isButtonEnabled;
+    }
+
+    public void Taxes()
+    {
+        ScoreManager.points -= points;
     }
 }

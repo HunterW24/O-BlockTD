@@ -8,6 +8,7 @@ TagManager:
   - Points
   - Ball
   - shot
+  - end
   layers:
   - Default
   - TransparentFX

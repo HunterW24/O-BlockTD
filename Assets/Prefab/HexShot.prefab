@@ -34123,7 +34123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63a55737fdde0b49a0fe97a2cbfb1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
+  delay: 0.5
 --- !u!135 &2610085514479554043
 SphereCollider:
   m_ObjectHideFlags: 0

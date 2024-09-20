@@ -14015,7 +14015,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7638163479143229482, guid: e9a10b94c7738e74696f43c1ec1d49d8, type: 3}
   projectileSpeed: 10
   fireposition: {fileID: 4262405423874703903}
-  shootingDelay: 1
+  shootingDelay: 0.5
   firePos2: {fileID: 8280944757860781610}
   firePos3: {fileID: 8685584349772840808}
   firePos4: {fileID: 3784358942736024177}

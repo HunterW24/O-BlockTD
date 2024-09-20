@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public GameObject gameOverScreen;
+   
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Health.health <= 0 && gameOverScreen.activeInHierarchy == false)
+        {
+            gameOverScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }

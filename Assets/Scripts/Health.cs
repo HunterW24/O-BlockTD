@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
     
     void Start()
     {
+        health = 100;
+
         healthText.text = "Health: " + health.ToString();
     }
 

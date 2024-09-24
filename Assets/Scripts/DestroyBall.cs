@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class DestroyBall : MonoBehaviour
 {
+
+    public int balloonHp = 1;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ball")
         {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
+            balloonHp -= Shot.shot;
 
             ScoreManager.score++;
             ScoreManager.points++;
             
+        }
+        if (balloonHp <= 0)
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }

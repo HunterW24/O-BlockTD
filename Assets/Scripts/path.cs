@@ -18,19 +18,6 @@ public class path : MonoBehaviour
 
         parentPoint = GameObject.FindWithTag("Points");
 
-        /*if (parentPoint != null)
-        {
-            // Loop through each child in the hierarchy and access them in order
-            for (int i = 0; i < parentPoint.transform.childCount; i++)
-            {
-                // Get the child game object at index 'i'
-                GameObject childObject = parentPoint.transform.GetChild(i).gameObject;
-                Points[i] = childObject;
-
-                // Do something with the child object, for example, print its name
-                //Debug.Log("Child object name: " + childObject.name);
-            }
-        }*/
         Points = parentPoint.GetComponentsInChildren<Transform>();
         pointsIndex = 1;
         //transform.position = Points[pointsIndex].position;

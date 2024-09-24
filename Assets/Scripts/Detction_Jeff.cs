@@ -11,6 +11,7 @@ public class Detction_Jeff : MonoBehaviour
     public float projectileSpeed = 10f; // Speed of the projectile
     public GameObject fireposition;
     public float shootingDelay = 1f; // Delay between shots
+    public static int shot = 1;
 
     protected bool canShoot = true; // Flag to control shooting delay
 

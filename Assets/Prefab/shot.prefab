@@ -162,3 +162,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ccae8c7fa0486546af46d32093af3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BalloonHp: 1
+  shot: 1

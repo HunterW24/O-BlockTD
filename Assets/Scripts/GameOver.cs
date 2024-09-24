@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
 {
 
     public GameObject gameOverScreen;
+    public GameObject resetScore;
    
     void Start()
     {
@@ -18,6 +19,7 @@ public class GameOver : MonoBehaviour
         if (Health.health <= 0 && gameOverScreen.activeInHierarchy == false)
         {
             gameOverScreen.SetActive(true);
+            resetScore.SetActive(false);
             Time.timeScale = 0;
         }
     }

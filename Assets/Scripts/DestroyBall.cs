@@ -8,18 +8,22 @@ public class DestroyBall : MonoBehaviour
     public int balloonHp = 1;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.tag == "shot")
         {
-            balloonHp -= Shot.shot;
-
+            /*balloonHp -= Shot.shot;*/
             ScoreManager.score++;
             ScoreManager.points++;
+
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+
+            
             
         }
-        if (balloonHp <= 0)
+        /*if (balloonHp <= 0)
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-        }
+        }*/
     }
 }

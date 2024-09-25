@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - shot
   - end
+  - Boom
   layers:
   - Default
   - TransparentFX

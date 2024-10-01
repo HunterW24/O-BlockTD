@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DestroyBall : MonoBehaviour
 {
-
     public int balloonHp = 1;
     private void OnCollisionEnter(Collision collision)
     {

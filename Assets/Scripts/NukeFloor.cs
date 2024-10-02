@@ -5,6 +5,8 @@ using UnityEngine;
 public class NukeFloor : MonoBehaviour
 {
     public ParticleSystem nukeSmoke;
+
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {

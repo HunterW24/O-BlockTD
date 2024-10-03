@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameStart : MonoBehaviour
 {
 
-    public GameObject gameStartScreen;
+    public static GameObject gameStartScreen;
     // Start is called before the first frame update
     void Start()
     {
+        gameStartScreen = GameObject.FindWithTag("Start");
+
         if (gameStartScreen.activeInHierarchy == true)
         {
             Time.timeScale = 0;

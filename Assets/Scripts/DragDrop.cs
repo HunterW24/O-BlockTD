@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
-{ 
+{
     private RectTransform rectTransform;
 
     /*[SerializeField] private Canvas canvas;*/
@@ -25,13 +25,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta /*/ canvas.scaleFactor*/ ;
     }
-    public void OnEndDrag(PointerEventData eventData) 
+    public void OnEndDrag(PointerEventData eventData)
     {
         /*throw new System.NotImplementedException();*/
         Debug.Log("OnEndDrag");
     }
 
-    public void OnPointerDown (PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         /*throw new System.NotImplementedException();*/
         Debug.Log("OnPointerDown");

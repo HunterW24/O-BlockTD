@@ -10,6 +10,7 @@ TagManager:
   - shot
   - end
   - Boom
+  - Start
   layers:
   - Default
   - TransparentFX

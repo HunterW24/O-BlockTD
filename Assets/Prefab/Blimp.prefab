@@ -11852,7 +11852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentPoint: {fileID: 0}
   Points: []
-  movespeed: 2
+  movespeed: 1
   pointsIndex: 0
 --- !u!114 &5231320097167204800
 MonoBehaviour:

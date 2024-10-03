@@ -23,4 +23,6 @@ public class GameOver : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+
+    
 }

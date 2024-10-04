@@ -13,15 +13,15 @@ public class Restart : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reloads the game w/the Main Menu
         gameStartScreen.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void Fullrestart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
-        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reloads Game to the Main Menu
+        Time.timeScale = 0;
     }
 
 }

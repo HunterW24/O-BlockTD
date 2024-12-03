@@ -13,7 +13,7 @@ public class OBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -23,13 +23,13 @@ public class OBlock : MonoBehaviour
         button.interactable = isButtonEnabled;
     }
 
-    private void Switch()
+    public void Switch()
     {
         towerDefense.SetActive(true);
         oBlock.SetActive(false);
     }
 
-    private void change()
+    public void change()
     {
         towerDefense.SetActive(false);
         oBlock.SetActive(true);

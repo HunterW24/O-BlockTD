@@ -7,6 +7,9 @@ public class Setting : MonoBehaviour
 {
 
     public GameObject settingScreen;
+    public GameObject mainMenu;
+    public GameObject oBlockMenu;
+    public GameObject mainMenusettings;
 
     // Start is called before the first frame update
     void Start()
@@ -30,5 +33,38 @@ public class Setting : MonoBehaviour
     {
         Time.timeScale = 1;
         settingScreen.SetActive(false);
+
+       /* if (mainMenu.activeInHierarchy == true)
+        {
+            Time.timeScale = 0;
+        }
+
+        if (oBlockMenu.activeInHierarchy == true)
+        {
+            Time.timeScale = 0;
+        }*/
+    }
+
+    public void menuSettings()
+    {
+        Time.timeScale = 0;
+       mainMenusettings.SetActive(true);
+    }
+
+
+    public void MenusettingsLeave()
+    {
+        Time.timeScale = 0;
+        mainMenusettings.SetActive(false);
+
+        /* if (mainMenu.activeInHierarchy == true)
+         {
+             Time.timeScale = 0;
+         }
+
+         if (oBlockMenu.activeInHierarchy == true)
+         {
+             Time.timeScale = 0;
+         }*/
     }
 }

@@ -11,4 +11,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/O-Block.unity
     guid: 44091710ffe6d8c4a83529ece2c6fd0f
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: ef2ec212c7ac1cc4dabefe8b3959166f, type: 2}

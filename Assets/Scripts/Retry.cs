@@ -11,12 +11,13 @@ public class Restart : MonoBehaviour
     {
         gameStartScreen = GameObject.FindWithTag("Start");
     }
-    public void RestartGame()
+    /*public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reloads the game w/the Main Menu
         gameStartScreen.SetActive(false);
         Time.timeScale = 1;
     }
+    */
 
     public void Fullrestart()
     {
